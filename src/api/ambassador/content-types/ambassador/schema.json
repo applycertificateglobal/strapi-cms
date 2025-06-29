@@ -6,17 +6,22 @@
     "displayName": "Ambassador"
   },
   "options": {
-    "draftAndPublish": false
+    "draftAndPublish": true
   },
   "attributes": {
     "name": {
       "type": "string",
       "required": true
     },
+    "email": {
+      "type": "email",
+      "required": true
+    },
     "university": {
       "type": "relation",
       "relation": "manyToOne",
-      "target": "api::university.university"
+      "target": "api::university.university",
+      "inversedBy": "ambassadors"
     }
   }
 }

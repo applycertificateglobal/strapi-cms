@@ -9,19 +9,21 @@
     "draftAndPublish": true
   },
   "attributes": {
-    "name": {
-      "type": "string"
-    },
-    "email": {
-      "type": "email"
-    },
-    "phone": {
-      "type": "string"
+    "studentName": {
+      "type": "string",
+      "required": true
     },
     "university": {
       "type": "relation",
       "relation": "manyToOne",
-      "target": "api::university.university"
+      "target": "api::university.university",
+      "inversedBy": "bookings"
+    },
+    "ambassador": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::ambassador.ambassador",
+      "inversedBy": "bookings"
     }
   }
 }

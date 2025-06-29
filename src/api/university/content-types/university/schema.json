@@ -13,13 +13,16 @@
       "type": "string",
       "required": true
     },
-    "location": {
-      "type": "string"
-    },
     "ambassadors": {
       "type": "relation",
       "relation": "oneToMany",
       "target": "api::ambassador.ambassador",
+      "mappedBy": "university"
+    },
+    "bookings": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::booking.booking",
       "mappedBy": "university"
     }
   }

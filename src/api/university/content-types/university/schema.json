@@ -16,8 +16,10 @@
     "location": {
       "type": "string"
     },
-    "ranking": {
-      "type": "integer"
+    "ambassadors": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::ambassador.ambassador"
     }
   }
 }

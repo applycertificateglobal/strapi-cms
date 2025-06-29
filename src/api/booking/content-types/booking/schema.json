@@ -6,21 +6,22 @@
     "displayName": "Booking"
   },
   "options": {
-    "draftAndPublish": false
+    "draftAndPublish": true
   },
   "attributes": {
-    "studentName": {
+    "name": {
+      "type": "string"
+    },
+    "email": {
+      "type": "email"
+    },
+    "phone": {
       "type": "string"
     },
     "university": {
       "type": "relation",
       "relation": "manyToOne",
       "target": "api::university.university"
-    },
-    "ambassador": {
-      "type": "relation",
-      "relation": "manyToOne",
-      "target": "api::ambassador.ambassador"
     }
   }
 }

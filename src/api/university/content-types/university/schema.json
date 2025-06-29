@@ -3,11 +3,10 @@
   "info": {
     "singularName": "university",
     "pluralName": "universities",
-    "displayName": "University",
-    "description": "Universities available for ambassador booking"
+    "displayName": "University"
   },
   "options": {
-    "draftAndPublish": false
+    "draftAndPublish": true
   },
   "attributes": {
     "name": {
@@ -17,20 +16,11 @@
     "location": {
       "type": "string"
     },
-    "country": {
-      "type": "string"
-    },
-    "instagramLink": {
-      "type": "string"
-    },
-    "description": {
-      "type": "text"
-    },
     "ambassadors": {
       "type": "relation",
       "relation": "oneToMany",
       "target": "api::ambassador.ambassador",
-      "inversedBy": "university"
+      "mappedBy": "university"
     }
   }
 }

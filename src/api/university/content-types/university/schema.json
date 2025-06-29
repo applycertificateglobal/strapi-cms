@@ -1,25 +1,33 @@
-{
-  "collectionName": "universities",
-  "info": {
-    "singularName": "university",
-    "pluralName": "universities",
-    "displayName": "University"
-  },
-  "options": {
-    "draftAndPublish": false
-  },
-  "attributes": {
-    "name": {
-      "type": "string",
-      "required": true
+'use strict';
+
+module.exports = {
+  routes: [
+    {
+      method: 'GET',
+      path: '/universities',
+      handler: 'university.find',
+      config: {
+        policies: [],
+        auth: false,
+      },
     },
-    "location": {
-      "type": "string"
+    {
+      method: 'GET',
+      path: '/universities/:id',
+      handler: 'university.findOne',
+      config: {
+        policies: [],
+        auth: false,
+      },
     },
-    "ambassadors": {
-      "type": "relation",
-      "relation": "oneToMany",
-      "target": "api::ambassador.ambassador"
-    }
-  }
-}
+    {
+      method: 'POST',
+      path: '/universities',
+      handler: 'university.create',
+      config: {
+        policies: [],
+        auth: false,
+      },
+    },
+  ],
+};

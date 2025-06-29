@@ -1,33 +1,36 @@
-'use strict';
-
-module.exports = {
-  routes: [
-    {
-      method: 'GET',
-      path: '/universities',
-      handler: 'university.find',
-      config: {
-        policies: [],
-        auth: false,
-      },
+{
+  "collectionName": "universities",
+  "info": {
+    "singularName": "university",
+    "pluralName": "universities",
+    "displayName": "University",
+    "description": "Universities available for ambassador booking"
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "attributes": {
+    "name": {
+      "type": "string",
+      "required": true
     },
-    {
-      method: 'GET',
-      path: '/universities/:id',
-      handler: 'university.findOne',
-      config: {
-        policies: [],
-        auth: false,
-      },
+    "location": {
+      "type": "string"
     },
-    {
-      method: 'POST',
-      path: '/universities',
-      handler: 'university.create',
-      config: {
-        policies: [],
-        auth: false,
-      },
+    "country": {
+      "type": "string"
     },
-  ],
-};
+    "instagramLink": {
+      "type": "string"
+    },
+    "description": {
+      "type": "text"
+    },
+    "ambassadors": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::ambassador.ambassador",
+      "inversedBy": "university"
+    }
+  }
+}

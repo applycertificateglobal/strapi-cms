@@ -9,29 +9,18 @@
     "draftAndPublish": false
   },
   "attributes": {
-    "name": {
-      "type": "string",
-      "required": true
+    "studentName": {
+      "type": "string"
     },
-    "email": {
-      "type": "email",
-      "required": true
+    "university": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::university.university"
     },
     "ambassador": {
       "type": "relation",
       "relation": "manyToOne",
       "target": "api::ambassador.ambassador"
-    },
-    "message": {
-      "type": "text"
-    },
-    "preferredTime": {
-      "type": "datetime"
-    },
-    "status": {
-      "type": "enumeration",
-      "enum": ["pending", "confirmed", "cancelled"],
-      "default": "pending"
     }
   }
 }

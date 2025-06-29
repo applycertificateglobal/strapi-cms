@@ -8,6 +8,7 @@ module.exports = {
       handler: 'booking.find',
       config: {
         policies: [],
+        auth: false,
       },
     },
     {
@@ -16,6 +17,7 @@ module.exports = {
       handler: 'booking.findOne',
       config: {
         policies: [],
+        auth: false,
       },
     },
     {
@@ -24,7 +26,8 @@ module.exports = {
       handler: 'booking.create',
       config: {
         policies: [],
+        auth: false,
       },
-    },
+    }
   ],
 };

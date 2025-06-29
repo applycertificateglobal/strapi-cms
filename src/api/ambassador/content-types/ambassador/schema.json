@@ -1,0 +1,40 @@
+{
+  "collectionName": "ambassadors",
+  "info": {
+    "singularName": "ambassador",
+    "pluralName": "ambassadors",
+    "displayName": "Ambassador"
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "attributes": {
+    "name": {
+      "type": "string",
+      "required": true
+    },
+    "email": {
+      "type": "email",
+      "unique": true
+    },
+    "instagramHandle": {
+      "type": "string"
+    },
+    "university": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::university.university"
+    },
+    "stream": {
+      "type": "string"
+    },
+    "bio": {
+      "type": "text"
+    },
+    "profilePicture": {
+      "type": "media",
+      "multiple": false,
+      "required": false
+    }
+  }
+}

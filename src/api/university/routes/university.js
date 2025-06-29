@@ -20,5 +20,14 @@ module.exports = {
         auth: false,
       },
     },
+    {
+      method: 'POST',
+      path: '/universities',
+      handler: 'university.create',
+      config: {
+        policies: [],
+        auth: false,
+      },
+    },
   ],
 };

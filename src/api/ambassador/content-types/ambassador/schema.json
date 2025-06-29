@@ -22,6 +22,12 @@
       "relation": "manyToOne",
       "target": "api::university.university",
       "inversedBy": "ambassadors"
+    },
+    "bookings": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::booking.booking",
+      "mappedBy": "ambassador"
     }
   }
 }
